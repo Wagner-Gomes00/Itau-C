@@ -6,6 +6,7 @@ export default function Extrato({ extrato }) {
         <View style={styles.extratoItem}>
             <Text>Transação {item.id}</Text>
             <Text>Valor: R$ {item.valor.toFixed(2)}</Text>
+            
         </View>
     );
 
