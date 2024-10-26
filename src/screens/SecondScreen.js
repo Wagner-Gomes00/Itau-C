@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import { ThemeContext } from '../components/ThemeContext';
 
 export default function SecondScreen({ navigation }) {
-    const [saldo, setSaldo] = useState(7500);
+    const [saldo, setSaldo] = useState(49000);
     const [extrato, setExtrato] = useState([]);
     const { darkTheme, toggleTheme } = useContext(ThemeContext);
 

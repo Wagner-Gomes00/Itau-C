@@ -11,8 +11,15 @@ export default function PixScreen({ route, navigation }) {
     const handlePix = () => {
         const valor = parseFloat(valorPix);
         if (valor > 0 && valor <= saldo) {
+            const dataAtual = new Date();
+            const novaTransacao = {
+                id: extrato.length + 1,
+                valor: valor,
+                data: dataAtual.toLocaleDateString(),
+                hora: dataAtual.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            };
             setSaldo(saldo - valor);
-            setExtrato([...extrato, { id: extrato.length + 1, valor }]);
+            setExtrato([...extrato, novaTransacao]);
             navigation.goBack();
         } else {
             alert('Valor inválido ou saldo insuficiente');

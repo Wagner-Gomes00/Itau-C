@@ -58,9 +58,9 @@ export default function LoginScreen() {
                 ))}
             </View>
 
-            
+           
             <TouchableOpacity
-                style={[styles.botaoContinuar, { backgroundColor: senha.length === 6 ? '#FFA500' : '#ccc' }]}
+                style={[styles.botaoContinuar, { backgroundColor: senha.length === 6 ? '#229a00' : '#ccc' }]}
                 disabled={senha.length !== 6}
                 onPress={handleContinuar}
             >
